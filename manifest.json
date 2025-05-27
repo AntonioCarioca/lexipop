@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "LexiPop - Dicionário Instantâneo",
+  "version": "1.0",
+  "description": "Mostra a definição de uma palavra com Ctrl+Clique.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["https://pt.wiktionary.org/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
