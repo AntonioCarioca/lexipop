@@ -7,7 +7,7 @@ function createDialog() {
 
   const close = document.createElement("button");
   close.className = "close";
-  close.innerHTML = "&times;";
+  close.textContent = "×";
   close.onclick = () => backdrop.remove();
 
   const content = document.createElement("div");
@@ -54,10 +54,25 @@ document.addEventListener("click", async (e) => {
   const content = createDialog();
   const defs = await fetchDefinition(selection.toLowerCase());
 
+  content.innerHTML = "";
+
   if (!defs) {
-    content.innerHTML = `<p>Não foi possível encontrar definição para "<strong>${selection}</strong>".</p>`;
+    const p = document.createElement("p");
+    p.textContent = `Não foi possível encontrar definição para "${selection}".`;
+    content.appendChild(p);
     return;
   }
 
-  content.innerHTML = `<h2>${selection}</h2><ul>${defs.map(d => `<li>${d}</li>`).join("")}</ul>`;
+  const h2 = document.createElement("h2");
+  h2.textContent = selection;
+  const ul = document.createElement("ul");
+
+  defs.forEach(def => {
+    const li = document.createElement("li");
+    li.textContent = def;
+    ul.appendChild(li);
+  });
+
+  content.appendChild(h2);
+  content.appendChild(ul);
 });
