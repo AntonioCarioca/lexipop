@@ -18,7 +18,7 @@
 
 1. Instale a extensão no seu navegador:
    - [Chrome Web Store](#) *(em breve)*
-   - [Firefox Add-ons](#) *(em breve)*
+   - [Firefox Add-ons](https://addons.mozilla.org/pt-BR/firefox/addon/lexipop-dicion%C3%A1rio-instant%C3%A2neo/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)
 
 2. Navegue normalmente pela web.
 3. Segure **Ctrl** (ou **Cmd** no macOS) e clique em qualquer **palavra em português**.
